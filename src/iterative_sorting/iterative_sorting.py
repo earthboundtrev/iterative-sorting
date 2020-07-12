@@ -1,23 +1,45 @@
+# import ipdb
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
     # loop through n-1 elements
+    # ipdb.set_trace()
     for i in range(0, len(arr)-1):
         cur_index = i
         smallest_index = cur_index
         # TO-DO: find next smallest element
-        if cur_index < smallest_index:
         # (hint, can do in 3 loc)
         # Your code here
-            temp_variable = arr[cur_index]
-            arr[cur_index] = arr[smallest_index]
-            arr[smallest_index] = temp_variable 
-            smallest_index = cur_index
+        j = cur_index
+        for j in range(j, len(arr)-1):
+            if arr[j] < arr[cur_index]:
+                print("Arr[j]:", arr[j], "Arr[cur_index]:", arr[cur_index])
 
 
         # TO-DO: swap
         # Your code here
+                temp_variable = arr[cur_index]
+                arr[cur_index] = arr[j]
+                arr[j] = temp_variable 
 
     return arr
+
+#     # TO-DO: Complete the selection_sort() function below
+# def selection_sort(arr):
+#     # loop through n-1 elements
+#     for i in range(0, len(arr) - 1):
+#         cur_index = i
+#         smallest_index = cur_index
+#         # TO-DO: find next smallest element
+#         # (hint, can do in 3 loc)
+#         # Your code here
+
+
+#         # TO-DO: swap
+#         # Your code here
+
+#     return arr
+# array=[1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+# selection_sort(array)
 
 
 # TO-DO:  implement the Bubble Sort function below
