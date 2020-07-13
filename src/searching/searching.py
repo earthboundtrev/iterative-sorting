@@ -15,7 +15,7 @@ def binary_search(arr, target):
     end = len(arr) - 1
     mid = math.floor((end+start)/2)
 
-    if start == end+1:
+    if len(arr) == 0:
         return -1
 
     # ipdb.set_trace()
